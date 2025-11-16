@@ -19,7 +19,7 @@ public class AadharCotroller {
 	@Autowired
 	AadharService aadharservice;
 
-	@PostMapping("aadhar")
+	@PostMapping("getaadhar")
 	ResponseEntity addAadhar(@RequestBody AadharDto aadharDto) {
 		aadharservice.saveAadhar(aadharDto);
 		return new ResponseEntity(HttpStatus.CREATED);
